@@ -52,13 +52,13 @@ k = 0
 plt.ion()
 plt.figure(1)
 while True:
+    plt.clf()
     for i in range(mesh_range):
         for j in range(mesh_range):
             update(current_life,mesh_range,[i,j])
     current_life = new_life[:][:]
     k = k + 1
     print(k)
-    #plt.set_tittle("k")
     plt.imshow(current_life,cmap = plt.cm.gray)
     plt.show()
     plt.pause(0.01)
